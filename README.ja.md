@@ -83,12 +83,10 @@ docker run --gpus all -it -p 80:6006 -v /disk3/spliceai:/disk3/spliceai \
 - -p 80:6006は、Dockerコンテナ内のTensorboradがlistenする6006番ポートを、ホスト外からも手軽にWebで見られるように80番ポートにマップして公開
 
 # 3. SpliceAI(model.predict())を動かして測定
-## 3.1 Tensorboardのコンテナにattach
 ```
 docker ps
 ```
 既にコンテナが止まっている場合は```docker ps -a```で確認する。ここで表示されたコンテナIDを控えておく。
-```
 
 コンテナが既に止まっている場合はstartしてからexecで。
 ```
